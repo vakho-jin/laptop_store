@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ლეპტოპების სია</title>
+</head>
+<body>
+    <h1>ლეპტოპები</h1>
+    <a href="{% url 'laptop_create' %}">ლეპტოპის დამატება</a>
+    <ul>
+        {% for laptop in laptops %}
+            <li>
+                <a href="{% url 'laptop_detail' laptop.pk %}">{{ laptop }}</a> - {{ laptop.price }} ლარი
+                (<a href="{% url 'laptop_update' laptop.pk %}">რედაქტირება</a> |
+                <a href="{% url 'laptop_delete' laptop.pk %}">წაშლა</a>)
+            </li>
+        {% empty %}
+            <li>ლეპტოპები ვერ მოიძებნა</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

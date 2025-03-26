@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ laptop }}</title>
+</head>
+<body>
+    <h1>{{ laptop }}</h1>
+    <p>ფასი: {{ laptop.price }} ლარი</p>
+    <p>პროცესორი: {{ laptop.processor }}</p>
+    <p>ოპერატიული მეხსიერება: {{ laptop.ram }} გბ</p>
+    <p>შიდა მეხსიერება: {{ laptop.storage }} გბ</p>
+    <a href="{% url 'laptop_list' %}">უკან დაბრუნება</a>
+</body>
+</html>

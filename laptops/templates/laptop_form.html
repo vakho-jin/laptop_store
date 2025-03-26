@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ლეპტოპის {% if form.instance.pk %}რედაქტირება{% else %}დამატება{% endif %}</title>
+</head>
+<body>
+    <h1>ლეპტოპის {% if form.instance.pk %}რედაქტირება{% else %}დამატება{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">შენახვა</button>
+    </form>
+    <a href="{% url 'laptop_list' %}">უკან დაბრუნება</a>
+</body>
+</html>

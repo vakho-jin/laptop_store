@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ laptop }} წაშლა</title>
+</head>
+<body>
+    <h1>წავშალოთ {{ laptop }}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">დიახ, წავშალოთ</button>
+    </form>
+    <a href="{% url 'laptop_list' %}">გაუქმება</a>
+</body>
+</html>
